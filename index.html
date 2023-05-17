@@ -1,3 +1,62 @@
+<!DOCTYPE html>
 <html>
-  HELLO WORDL
+<head>
+  <title>Allen's page</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body style="background-color: red;">
+  <!-- Navigation bar using JavaScript -->
+  <div class="navbar">
+    <a href="index.html" class="active">Home</a>
+    <a href="page1.html">Sports</a>
+    <a href="page2.html">Food</a>
+    <a href="page3.html">YouTube</a> 
+  </div>
+
+  <h1> WORST BASKETBALL TEAM EVER </h1>
+  
+  <a href="https://twitter.com/Lakers"> 
+    <img src="lakers.png" alt="Warrios in 7" title="Warriors own us">
+  </a>
+
+  <h2> HEADER 2 </h2>
+ 
+  <h3> HEADER 3 </h3>
+  
+  <h4> HEADER 4 </h4>
+  
+  <p> Paragraph Tags </p>
+  
+  <ol>
+    <li> Apple </li>
+    <li> Bannana</li>
+    <li> Strawberry</li>
+  </ol>
+
+  <ul>
+    <li>Warriors</li>
+    <li>Giants</li>
+    <li>Niners</li>
+  </ul>
+
+  <script>
+    // Get the current page's URL and split it at the '/' character
+    var url = window.location.href.split('/');
+
+    // Get the last item in the URL (the page's filename)
+    var currentPage = url[url.length - 1];
+
+    // Get all the navigation links
+    var links = document.querySelectorAll('.navbar a');
+
+    // Loop through each link and add the 'active' class to the current page's link
+    for (var i = 0; i < links.length; i++) {
+      if (links[i].href.indexOf(currentPage) !== -1) {
+        links[i].classList.add('active');
+      }
+    }
+  </script>
+</body>
 </html>
